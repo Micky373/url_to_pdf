@@ -5,10 +5,11 @@ import os
 
 # Defining the path to the executable file and output file
 path_to_the_tool = 'tool_file/wkhtmltopdf.exe'
+second_path_to_the_tool = 'https://github.com/Micky373/url_to_pdf/blob/main/tool_file/wkhtmltopdf.exe'
 output_file = "output.pdf"
 
 # Creating the configuration to the pdf tool
-config = pdfkit.configuration(wkhtmltopdf = path_to_the_tool)
+config = pdfkit.configuration(wkhtmltopdf = second_path_to_the_tool)
 
 # Creating a title for the page
 st.header("Url to pdf convertor")

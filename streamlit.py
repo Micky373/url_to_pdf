@@ -8,7 +8,7 @@ path_to_the_tool = 'tool_file/wkhtmltopdf.exe'
 output_file = "output.pdf"
 
 # Creating the configuration to the pdf tool
-# config = pdfkit.configuration(wkhtmltopdf = path_to_the_tool)
+config = pdfkit.configuration(wkhtmltopdf = path_to_the_tool)
 
 # Creating a title for the page
 st.header("Url to pdf convertor")
@@ -32,7 +32,8 @@ if st.button("Convert"):
 
         # Converting webpage to pdf
         pdfkit.from_url(url,
-                        output_path=output_file
+                        output_path=output_file,
+                        configuration=config
                         )
 
         # Displaying for the user that we successfuly changed the url to pdf
